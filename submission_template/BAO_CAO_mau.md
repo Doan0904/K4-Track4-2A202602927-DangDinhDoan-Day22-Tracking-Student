@@ -1,6 +1,6 @@
 # Báo cáo lab: chọn tracker cho 5 video
 
-**Nhóm:** làm cá nhân **Thành viên:** Đặng Đình Đoan (2A202602927)
+**Nhóm:** làm cá nhân **Thành viên:** Đặng Đỉnh Đoàn (2A202602927)
 
 Detector cố định: `yolo26n.pt`, ảnh 640 px, Re-ID `osnet_x0_25_msmt17`. Không đổi các mục này trong bài nộp chính.
 
