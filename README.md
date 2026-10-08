@@ -60,3 +60,7 @@ python scripts/evaluate_practice.py \
 - `submission_template/BAO_CAO_mau.md` đã điền. Số HOTA / MOTA / IDF1 chỉ bắt buộc cho `video_1`.
 
 Chi tiết từng bước, sự cố, và lịch 2 giờ: [HUONG_DAN.md](HUONG_DAN.md).
+
+## Chạy trên Colab (GPU)
+
+Không có GPU ở máy? Mở `colab_lab_tracking.ipynb` trên Colab (Runtime T4). Notebook cài đặt, tải dữ liệu, quét tracker bằng `scripts/sweep_tracking.py`, chạy bản nộp đủ frame và chấm `video_1`. Các ô ghi `# CHỈNH` là chỗ bạn chọn cấu hình sau khi xem video.
