@@ -15,6 +15,7 @@ Ví dụ:
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -185,6 +186,7 @@ def main() -> None:
     parser.add_argument("--no-video", action="store_true", help="Không xuất video xem thử")
     parser.add_argument("--trackeval-root", type=Path, default=None, help="Chỉ dùng cho video_1, chạy đủ frame")
     parser.add_argument("--out", type=Path, default=Path("runs/sweep"))
+    parser.add_argument("--save-json", type=Path, default=None, help="Ghi bảng kết quả ra file JSON")
     args = parser.parse_args()
 
     source = args.lab_data_root / args.video / "img1"
@@ -224,6 +226,10 @@ def main() -> None:
             rows.append(row)
 
     print("\n" + format_table(rows))
+    if args.save_json:
+        args.save_json.parent.mkdir(parents=True, exist_ok=True)
+        args.save_json.write_text(json.dumps(rows, indent=2))
+        print(f"Đã ghi bảng: {args.save_json}")
 
 
 if __name__ == "__main__":
