@@ -1,5 +1,8 @@
 lab_data/
-runs/
+runs/*
+!runs/nop_bai/
+runs/nop_bai/*.mp4
+*.mp4
 TrackEval/
 *.pt
 __pycache__/
